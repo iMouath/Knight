@@ -1,23 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class MouseScript : MonoBehaviour
-{
+public class MouseScript : MonoBehaviour {
+    public Texture2D cursorTexture2D;
 
-	public Texture2D cursorTexture2D;
+    private readonly Vector2 hotspot = Vector2.zero;
 
 //	public GameObject mousePoint;
-	private CursorMode mode = CursorMode.ForceSoftware;
+    private readonly CursorMode mode = CursorMode.ForceSoftware;
 
-	private Vector2 hotspot = Vector2.zero;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		Cursor.SetCursor(cursorTexture2D, hotspot, mode);
-	}
+    // Use this for initialization
+    private void Start() {
+    }
+
+    // Update is called once per frame
+    private void Update() {
+        Cursor.SetCursor(cursorTexture2D, hotspot, mode);
+    }
 }

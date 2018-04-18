@@ -12,7 +12,13 @@
             <e p="CameraFollow.cs" t="Include" />
             <e p="MouseScript.cs" t="Include" />
           </e>
+          <e p="Enemy Scripts" t="Include">
+            <e p="EnemyControl.cs" t="Include" />
+            <e p="EnemyHealth.cs" t="Include" />
+          </e>
           <e p="Player Scripts" t="Include">
+            <e p="PlayerAttack.cs" t="Include" />
+            <e p="PlayerAttackEffects.cs" t="Include" />
             <e p="PlayerMove.cs" t="Include" />
           </e>
         </e>

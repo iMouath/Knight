@@ -1,41 +1,36 @@
+using System;
 using UnityEngine;
-using System.Collections;
-using System.Reflection;
-
+using Object = UnityEngine.Object;
 
 public class MecanimEventData : MonoBehaviour {
-	public MecanimEventDataEntry[] data;
-	
-	public UnityEngine.Object lastEdit;
+    public MecanimEventDataEntry[] data;
+
+    public Object lastEdit;
 }
 
-[System.Serializable]
+[Serializable]
 public class MecanimEventDataEntry {
-	public UnityEngine.Object animatorController;
-	public int layer;
-	public int stateNameHash;
-	public MecanimEvent[] events;
-	
-	public MecanimEventDataEntry() {
-		events = new MecanimEvent[0];
-	}
-	
-	public MecanimEventDataEntry(MecanimEventDataEntry other) {
-		
-		this.animatorController = other.animatorController;
-		this.layer = other.layer;
-		this.stateNameHash = other.stateNameHash;
-		
-		if (other.events == null)
-			this.events = new MecanimEvent[0];
-		else {
-			this.events = new MecanimEvent[other.events.Length];
-			
-			for (int i = 0; i < this.events.Length; i++) {
-				
-				this.events[i] = new MecanimEvent(other.events[i]);
-				
-			}
-		}
-	}
+    public Object animatorController;
+    public MecanimEvent[] events;
+    public int layer;
+    public int stateNameHash;
+
+    public MecanimEventDataEntry() {
+        events = new MecanimEvent[0];
+    }
+
+    public MecanimEventDataEntry(MecanimEventDataEntry other) {
+        animatorController = other.animatorController;
+        layer = other.layer;
+        stateNameHash = other.stateNameHash;
+
+        if (other.events == null) {
+            events = new MecanimEvent[0];
+        }
+        else {
+            events = new MecanimEvent[other.events.Length];
+
+            for (var i = 0; i < events.Length; i++) events[i] = new MecanimEvent(other.events[i]);
+        }
+    }
 }
