@@ -16,9 +16,18 @@
             <e p="EnemyControl.cs" t="Include" />
             <e p="EnemyHealth.cs" t="Include" />
           </e>
+          <e p="FX Scripts" t="Include">
+            <e p="DestroyAfterTime.cs" t="Include" />
+            <e p="DestroyPointer.cs" t="Include" />
+            <e p="FireShield.cs" t="Include" />
+            <e p="FireTornadoMove.cs" t="Include" />
+            <e p="HealScript.cs" t="Include" />
+            <e p="SkillDamage.cs" t="Include" />
+          </e>
           <e p="Player Scripts" t="Include">
             <e p="PlayerAttack.cs" t="Include" />
             <e p="PlayerAttackEffects.cs" t="Include" />
+            <e p="PlayerHealth.cs" t="Include" />
             <e p="PlayerMove.cs" t="Include" />
           </e>
         </e>

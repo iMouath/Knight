@@ -252,7 +252,8 @@ GameObject:
   - component: {fileID: 143338672973904644}
   - component: {fileID: 195291302910562124}
   - component: {fileID: 114377302630640906}
-  m_Layer: 0
+  - component: {fileID: 114129418111089956}
+  m_Layer: 8
   m_Name: Skeleton
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -1401,6 +1402,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114129418111089956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315232647364216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964e13aaae340624a9af7c5cf8602c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  health_Img: {fileID: 0}
 --- !u!114 &114377302630640906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1412,6 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f33530b8649214d8cf93b3c7f169f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy_CurrentState: 0
 --- !u!137 &137091109451311284
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
